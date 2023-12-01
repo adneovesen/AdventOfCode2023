@@ -54,7 +54,7 @@ namespace AdventOfCode2023.Day01
                 score += int.Parse(twoDigitNumber);
             }
 
-            return score; // not 54533 54698 54518
+            return score; 
         }
 
         private static void ItterateLine(string line, ref string first, ref string last)
