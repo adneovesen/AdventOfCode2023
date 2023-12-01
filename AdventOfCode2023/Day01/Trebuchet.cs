@@ -33,15 +33,13 @@ namespace AdventOfCode2023.Day01
                 if (partTwo)
                 {
                     var numbers = getNumbers();
-                    var count = 1;
-                    foreach (var number in numbers)
+                    foreach (var t in line)
                     {
-                        if (line.Contains(number))
+                        partTwoLine += t;
+                        foreach (var number in numbers.Where(number => partTwoLine.Contains(number.Key)))
                         {
-                            partTwoLine = line.Replace(number, count.ToString());
-                            continue;
+                            partTwoLine = partTwoLine.Replace(number.Key, number.Value);
                         }
-                        count++;
                     }
                 }
                 if (partTwo)
@@ -56,27 +54,27 @@ namespace AdventOfCode2023.Day01
                 score += int.Parse(twoDigitNumber);
             }
 
-            return score;
+            return score; // not 54533 54698 54518
         }
 
         private static void ItterateLine(string line, ref string first, ref string last)
         {
-            foreach (var letter in line)
+            foreach (var letter in line.Where(char.IsDigit))
             {
-                if (char.IsDigit(letter))
+                if (first is "")
+                    first += letter;
+                else
                 {
-                    if (first is "")
-                        first += letter;
-                    else
-                        last = "";
-                    last += letter;
+                    last = "";
                 }
+                last += letter;
             }
         }
 
-        private static string[] getNumbers()
+        private static Dictionary<string, string> getNumbers()
         {
-            return ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
-        }
+            return new Dictionary<string, string>
+                { { "one", "1e" },{ "two", "2o" }, { "three", "3e" },{ "four", "4" }, { "five", "5e" },{ "six", "6" }, { "seven", "7n" },{ "eight", "8t" },{ "nine", "9e" } };
+    }
     }
 }

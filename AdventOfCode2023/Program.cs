@@ -11,5 +11,5 @@ Console.WriteLine($"Number of lines in sample.txt {Test.GetNumberOfLines(path)}"
 // Day 1
 path = "..\\..\\..\\Day01\\input.txt";
 Console.WriteLine($"What is the sum of all of the calibration values? {Trebuchet.PartOne(path)}");
-path = "..\\..\\..\\Day01\\sample2.txt";
+path = "..\\..\\..\\Day01\\input.txt";
 Console.WriteLine($"What is the sum of all of the calibration values? {Trebuchet.PartTwo(path)}");
