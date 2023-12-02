@@ -2,6 +2,7 @@
 
 using AdventOfCode2023.Day00;
 using AdventOfCode2023.Day01;
+using AdventOfCode2023.Day02;
 
 
 // Initial Test
@@ -12,3 +13,8 @@ Console.WriteLine($"Number of lines in sample.txt {Test.GetNumberOfLines(path)}"
 path = "..\\..\\..\\Day01\\input.txt";
 Console.WriteLine($"What is the sum of all of the calibration values? {Trebuchet.PartOne(path)}");
 Console.WriteLine($"What is the sum of all of the calibration values? {Trebuchet.PartTwo(path)}");
+
+// Day 2
+path = "..\\..\\..\\Day02\\input.txt";
+Console.WriteLine($"What is the sum of the IDs of those games? {CubeConundrum.PartOne(path)}");
+Console.WriteLine($"What is the sum of the power of these sets? {CubeConundrum.PartTwo(path)}");
