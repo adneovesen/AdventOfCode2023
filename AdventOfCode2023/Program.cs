@@ -4,6 +4,7 @@ using AdventOfCode2023.Day00;
 using AdventOfCode2023.Day01;
 using AdventOfCode2023.Day02;
 using AdventOfCode2023.Day03;
+using AdventOfCode2023.Day04;
 
 
 // Initial Test
@@ -24,3 +25,8 @@ Console.WriteLine($"What is the sum of the power of these sets? {CubeConundrum.P
 path = @"..\..\..\Day03\input.txt";
 Console.WriteLine($"What is the sum of all of the part numbers in the engine schematic? {GearRatios.PartOne(path)}"); 
 Console.WriteLine($"What is the sum of all of the gear ratios in your engine schematic? {GearRatios.PartTwo(path)}");
+
+// Day 4
+path = @"..\..\..\Day04\input.txt";
+Console.WriteLine($"How many points are they worth in total? {Scratchcards.PartOne(path)}");
+Console.WriteLine($"How many total scratchcards do you end up with? {Scratchcards.PartTwo(path)}");
