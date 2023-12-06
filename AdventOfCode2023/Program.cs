@@ -5,6 +5,7 @@ using AdventOfCode2023.Day01;
 using AdventOfCode2023.Day02;
 using AdventOfCode2023.Day03;
 using AdventOfCode2023.Day04;
+using AdventOfCode2023.Day06;
 
 
 // Initial Test
@@ -30,3 +31,8 @@ Console.WriteLine($"What is the sum of all of the gear ratios in your engine sch
 path = @"..\..\..\Day04\input.txt";
 Console.WriteLine($"How many points are they worth in total? {Scratchcards.PartOne(path)}");
 Console.WriteLine($"How many total scratchcards do you end up with? {Scratchcards.PartTwo(path)}");
+
+// Day 6
+path = @"..\..\..\Day06\input.txt";
+Console.WriteLine($"What do you get if you multiply these numbers together? {WaitForIt.PartOne(path)}");
+Console.WriteLine($"How many ways can you beat the record in this one much longer race? {WaitForIt.PartTwo(path)}");
