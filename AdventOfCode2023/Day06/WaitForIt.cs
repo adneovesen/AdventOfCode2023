@@ -17,8 +17,8 @@ namespace AdventOfCode2023.Day06
         private static int Solve(string path)
         {
             var lines = File.ReadAllLines(path);
-            var times = from m in Regex.Matches(lines[0], @"\d+") select int.Parse(m.Value);
-            var distances = from m in Regex.Matches(lines[1], @"\d+") select int.Parse(m.Value);
+            var times = Regex.Matches(lines[0], @"\d+").Select(x => int.Parse(x.Value));
+            var distances = Regex.Matches(lines[1], @"\d+").Select(x => int.Parse(x.Value));
 
             var score = 1;
             for (var i = 0; i < times.Count(); i++)
@@ -47,8 +47,9 @@ namespace AdventOfCode2023.Day06
         private static int SolvePartTwo(string path)
         {
             var lines = File.ReadAllLines(path);
-            var time = long.Parse((from m in Regex.Matches(lines[0], @"\d+") select m.Value).Aggregate((a, b) => a + b));
-            var distance = long.Parse((from m in Regex.Matches(lines[1], @"\d+") select m.Value).Aggregate((a, b) => a + b));
+
+            var time = long.Parse(string.Join("", Regex.Matches(lines[0], @"\d+").Select(x => x.Value)));
+            var distance = long.Parse(string.Join("", Regex.Matches(lines[1], @"\d+").Select(x => x.Value)));
 
             var score = 0;
             for (var j = 1; j < time; j++)
