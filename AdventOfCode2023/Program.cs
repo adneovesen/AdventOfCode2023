@@ -6,6 +6,7 @@ using AdventOfCode2023.Day02;
 using AdventOfCode2023.Day03;
 using AdventOfCode2023.Day04;
 using AdventOfCode2023.Day06;
+using AdventOfCode2023.Day07;
 
 
 // Initial Test
@@ -36,3 +37,8 @@ Console.WriteLine($"How many total scratchcards do you end up with? {Scratchcard
 path = @"..\..\..\Day06\input.txt";
 Console.WriteLine($"What do you get if you multiply these numbers together? {WaitForIt.PartOne(path)}");
 Console.WriteLine($"How many ways can you beat the record in this one much longer race? {WaitForIt.PartTwo(path)}");
+
+// Day 7
+path = @"..\..\..\Day07\input.txt";
+Console.WriteLine($"What are the total winnings? {CamelCards.PartOne(path)}");
+Console.WriteLine($"What are the new total winnings? {CamelCards.PartTwo(path)}"); 
